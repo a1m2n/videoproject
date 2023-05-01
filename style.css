@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('Gotham/Gotham-Medium.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'GothamLight';
+    src: url('Gotham/Gotham-Light.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'GothamLL';
+    src: url('Gotham/Gotham-LightItalic.otf') format('truetype');
+}
+
+
+body {
+    font-family: 'Gotham', sans-serif;
+    background-color: #eee6f3;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #57068c;
+}
+
+.no-scroll {
+    overflow: hidden;
+    height: 100%;
+  }
+  
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.header-description {
+    margin-left: 5px;
+}
+
+.header-description h1 {
+    font-size: 25px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.header-description p {
+    font-size: 14px;
+}
+
+.image-button-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-button {
+    display: block;
+    width: 30px;
+    height: 30px;
+    height: auto;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.image-button:hover {
+    opacity: 0.8;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f1f1f1;
+}
+
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 5px;
+    padding-top: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+}
+
+.color-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #b8b8b8; /* Change the color as per your preference */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+    z-index: 5;
+}
+
+
+.video-slide {
+    display: flex;
+    flex: 1;
+    min-width: 100%;
+    margin-bottom: 20px;
+}
+
+.video-container {
+    flex: 2;
+    position: relative;
+    padding-top: 56.25%;
+    height: 100%;
+    width: 100%;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.transcript-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+}
+
+.transcript {
+    font-family: 'GothamLight', sans-serif;
+    overflow-y: scroll;
+    max-height: 420px;
+    line-height: 2.0; /* Adjust line spacing */
+    margin-bottom: 1rem; /* Add space between paragraphs */
+    white-space: pre-line; /* Preserve line breaks in the text */
+}
+
+/* Add styles for the navigation buttons */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
+
+
+/* Comment section */
+.comment-section {
+    margin-top: 5px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-container {
+    margin-bottom: 10px;
+}
+
+#comment-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#submit-comment {
+    margin-top: 10px;
+    padding: 6px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.comments-display {
+    font-family: 'GothamLL', sans-serif;
+    margin-top: 10px;
+}
+
+#comments-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.comment-item {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.like-share{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+
+.like-button {
+    font-size: 35px;
+    color: #ff2d55;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .like-count {
+    font-size: 16px;
+    margin-left: 10px;
+    color: #333;
+  }
+
+  .social-share-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 1px;
+    font-size: 14px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.social-share-button:hover {
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.twitter {
+    background-color: #1da1f2;
+}
+
+.linkedin {
+    background-color: #0077b5;
+}
+
+
+.progress-bar {
+    position: absolute;
+    top: 0; /* Change this to 'top: 0' */
+    left: 0;
+    right: 0;
+    padding: 10px;
+    z-index: 10;
+}
+
+.progress {
+    position: relative;
+    height: 4px;
+    background-color: #ff0000; 
+}
+
+.marker {
+    position: absolute;
+    top: -5px;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background-color: #007bff;
+    cursor: pointer;
+}
+
+.marker[data-slide="0"] {
+    left: 0%;
+}
+
+.marker[data-slide="1"] {
+    left: 25%;
+}
+
+.marker[data-slide="2"] {
+    left: 50%;
+}
+
+.marker[data-slide="3"] {
+    left: 75%;
+}
+
+.marker[data-slide="4"] {
+    left: 99%;
+}
+
+
+.full-page-video {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .full-page-video video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .start-button {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 35px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+  }
+  
+  .start-button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+
+  .unmute-button {
+    position: fixed;
+    top: 20px;
+    right: 70px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .unmute-button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  
+
+  

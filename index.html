@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Story Website with Video.js</title>
+    <link href="https://vjs.zencdn.net/7.15.4/video-js.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="no-scroll">
+    <div class="header">
+        <div class="logo-container">
+            <img src="emblem.png" alt="Logo" class="logo">
+            <div class="header-description">
+                <h1>NYUAD CAMPUS WORKERS</h1>
+            </div>
+        </div>
+        <div class="image-button-container">
+            <button id="imageButton">
+                <img src="menu-icon.png" alt="Image Button" class="image-button">
+            </button>
+            <div id="dropdownMenu" class="dropdown-menu">
+                <a href="#" id="videoBackgroundTab">Home</a>
+                <a href="#" id="completeVideoTab"> Video</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="full-page-video">
+        <video id="background-video" autoplay muted loop>
+          <source src="videos/start.mp4" type="video/mp4">
+        </video>
+        <button class="start-button">START</button>
+        <button id="unmuteButton" class="unmute-button">
+            <i id="unmuteIcon" class="fas fa-volume-mute"></i>
+        </button>
+    </div>
+
+    <div class="container">
+        <div class="color-overlay"></div>
+        <div class="progress-bar">
+            <div class="progress">
+                <div class="marker" data-slide="0"></div>
+                <div class="marker" data-slide="1"></div>
+                <div class="marker" data-slide="2"></div>
+                <div class="marker" data-slide="3"></div>
+                <div class="marker" data-slide="4"></div>
+            </div>
+        </div>
+        <div class="grid">
+            <!-- Add more video elements with their corresponding transcripts for each video -->
+            <div class="video-slide">
+                <div class="video-container">
+                    <video
+                        id="video1"
+                        class="video-js vjs-default-skin"
+                        controls
+                        preload="auto"
+                        data-setup='{}'
+                        width="100%"
+                        height="100%"
+                    >
+                        <source src="videos/question1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="transcript-container">
+                    <h2>Question: Introduce Yourself<br><br><br></h2>
+                    <h3>Transcript</h3>
+                    <div class="transcript">
+                        My name is Rana Changaskan.I'm from Pakistan, Islam and the capital. 
+                        Hi. I'm Jazz.I'm 34 years old.I'm the vic of the Burro Blaco branch here in NYU.
+                        My name is Saleem Mohammed Saleem.I am from Myanmar.I'm working here now. It's more than one year, almost two years now. Hello. 
+                        My name is Ahmed Yani from Indonesia.My name is Sheraq.I'm from India. I've been working as housekeeper. 
+                        Hi, I'm Mohan.I work with Audiovisual Department.
+                        And that department sits in library all your classroom techand you see most of the events which are outdooror in Asics are all supported by us.
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat for each video -->
+
+
+            <div class="video-slide">
+                <div class="video-container">
+                    <video
+                        id="video2"
+                        class="video-js vjs-default-skin"
+                        controls
+                        preload="auto"
+                        data-setup='{}'
+                        width="100%"
+                        height="100%"
+                    >
+                        <source src="videos/question2.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="transcript-container">
+                    <h2>Question: Your favorite thing about NYUAD?<br><br><br></h2>
+                    <h3>Transcript</h3>
+                    <div class="transcript">
+                        The favorite thing about NYU is working environment.
+                        You say environment good.Environment, good.Campus also good safety, the place and working between a diverse community is very fair.
+                        Like almost everything, you know,because here it's good.
+                        Just like the people, the students, the staff. 
+                        NYU especially environment is very good.
+                        And then especially I like all the studentsbecause all the student is very polite.
+                        Not like outside I attend the university before, buthere is all of the student is very polite.
+                        And very frankly, that's things I really like.It that's like to work here, because wehave so many culture, so many students fromaround the world, we can meet each otherand then we know something new about them.
+                        My favorite thing is every day I'm coming tocampus and I have a new challenges to meet.
+                        So every day is a new day for me in this campus.
+                        And I enjoyed my work in being at Nyad.
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-slide">
+                <div class="video-container">
+                    <video
+                        id="video3"
+                        class="video-js vjs-default-skin"
+                        controls
+                        preload="auto"
+                        data-setup='{}'
+                        width="100%"
+                        height="100%"
+                    >
+                        <source src="videos/question3.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="transcript-container">
+                    <h2>Question: What feels like home at NYUAD?<br><br><br></h2>
+                    <h3>Transcript</h3>
+                    <div class="transcript">
+                        It's like feel like home.And you work with the different people from adifferent part of the world and we feel safeand yeah, 
+                        I feel very good from working here.Good.The staff also, the teaching very well.
+                        It's still like natural to be here.Same thing in the house and here.Natural thing.Yeah. 
+                        Feels like home.
+                        Because here we can meet with someone who has something new. I can learn also and then I can improve myself also. 
+                        Okay. NYU is my second home. So I'm basically from India. 
+                        And when I came to UAE, my first job is at NYUAD.
+                        So I'm being here for like last eight years in this campus working with our wonderful team which sits in library again.
+                        Before I live in Dubai. Twelve years there is but the first time I came here in Abu Dhabi and then I work in NYUAD.
+                        The day I came here, I'm really happy because I checked here environment.
+                        And then NYU was a very nice place.And then everything is all around total.
+                        Everything is very nice. I really like. And then I really like now I'm okay in Abu Dhabi also.I'm enjoying Abu Dhabi. 
+                        And I'm enjoying An NYUAD also. That's why I'm not looking for the new job also. Because I love NYU. That's why I stay here. Honest.
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-slide">
+                <div class="video-container">
+                    <video
+                        id="video4"
+                        class="video-js vjs-default-skin"
+                        controls
+                        preload="auto"
+                        data-setup='{}'
+                        width="100%"
+                        height="100%"
+                    >
+                        <source src="videos/question4.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="transcript-container">
+                    <h2>What creates a sense of belonging to you at NYUAD?<br><br><br></h2>
+                    <h3>Transcript</h3>
+                    <div class="transcript">Oh, that's a tough one. You can say when you come forthe work, you don't feel any stress. It's your colleagues, your supervisors andthe staff itself, they help.
+                        Like you feel comfortable when you are here. Yeah, because I'm here for food. So definitely with food. 
+                        Actually, I want to be like a family out of the NYU. Really? Now I'm always thinking I will not resign. 
+                        Also, I will not resign.I will stay here in NYU.Because of NYU, I stay here. 
+                        So if I have a chance, I will walk more.
+                        And not only the company, if the NYU University,
+                        if they need whatever help or if they need,if they have a higher, 
+                        I'm sure I willapply in NY because I want to enjoy here.NY is my second home.
+                        It's like I'm attached to this place and I love theenvironment, I love the people and I love to being here.</div>
+                </div>
+            </div>
+
+            <div class="video-slide">
+                <div class="video-container">
+                    <video
+                        id="video5"
+                        class="video-js vjs-default-skin"
+                        controls
+                        preload="auto"
+                        data-setup='{}'
+                        width="100%"
+                        height="100%"
+                    >
+                        <source src="videos/conclusion.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="transcript-container">
+                    <h2>Thank you NYUAD in Native Tongues<br><br><br></h2>
+                    <h3>Transcript</h3>
+                    <div class="transcript">...</div>
+                </div>
+            </div>
+                          
+        </div>
+       
+
+        <div class="like-share">
+            <button id="like-button" class="like-button">&#10084;</button>
+            <span id="like-count" class="like-count"></span>
+            <div>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" target="_blank" class="social-share-button facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/GrandTetonNPS?ref_src=twsrc%5Etfw" target="_blank" class="social-share-button twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/home" target="_blank" class="social-share-button linkedin"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            
+        </div>
+        
+        
+        <button class="nav-button prev-button" id="prevBtn">&#10094;</button>
+        <button class="nav-button next-button" id="nextBtn">&#10095;</button>
+    
+                <!-- Comment section -->
+        <div class="comment-section">
+            <h2>Comments</h2>
+            <div class="input-container">
+                <textarea id="comment-input" rows="4" cols="50" placeholder="Write your name and your response to the question posed in the video..."></textarea>
+                <button id="submit-comment">Submit</button>
+            </div>
+            <div class="comments-display">
+                <ul id="comments-list"></ul>
+            </div>
+        </div>
+          
+    </div>
+
+
+    <script src="sketch.js"></script>
+</body>
+</html>
